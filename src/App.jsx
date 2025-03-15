@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Resources/>}></Route>
         <Route path=":category" element={<Resources/>}></Route>
-        <Route></Route>
       </Routes>
     </>
   )
