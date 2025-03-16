@@ -1,9 +1,27 @@
+import Layout from "./Layout"
+
 export default function Nav() {
+    const {category} = useParams(); 
+    console.log(category)
+   
     return (
         <>
         <header>
-        <nav>
-            <ul>
+            <nav>
+                <Layout/>
+                <button>
+                    {category}
+                </button>
+            </nav>
+        </header>
+
+        <Link to="/">Hjem</Link>
+          <Link to="bosses">Bosses</Link>
+          <Link to="characters">Characters</Link>
+          <Link to="items">Items</Link>
+          <Link to="places">Places</Link>
+           
+           <ul>
                 <li>
                     <button onclick = "articleCardChange('HTML')">
                         HTML
@@ -30,8 +48,6 @@ export default function Nav() {
                     </button>
                 </li>
             </ul>
-        </nav>
-    </header>
     </>
     )
 }
