@@ -1,0 +1,46 @@
+@use "./font"; 
+@use "./colors"; 
+
+
+
+header { 
+    background-color: colors.$gainsboro; 
+    margin-top: 200px; 
+
+    nav {
+        
+        ul {
+            list-style: none; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0; 
+            margin: 0; 
+            li {
+                a {
+                    display: inline-block;
+                    background-color: colors.$darkslategray;
+                    color: colors.$white; 
+                    text-decoration: none;
+                    text-align: center; 
+                    font-size: 1.25rem; 
+                    font-weight: bolder; 
+                    border: none; 
+                    text-transform: capitalize;
+                    padding: 30px 96px;    
+                }
+            }
+        }
+    }
+}
+
+.currentNav {
+
+    a {
+        color: colors.$darkslategray;
+        background-color: colors.$white;
+    }
+    
+    
+}
+

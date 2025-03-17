@@ -1,0 +1,49 @@
+@use "./font"; 
+@use "./colors"; 
+
+#root {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
+body {
+    background-color: colors.$gainsboro; 
+    font-family: font.$roboto; 
+}
+
+
+main {
+    background-color: colors.$white; 
+    padding: 120px 200px 137px 95px; 
+
+    h2{
+        color: colors.$darkslategray; 
+        margin: 0; 
+        padding: 0; 
+        font-size: 30px; 
+        font-weight: bolder; 
+        text-align: left; 
+        text-transform: capitalize;
+    }
+
+    p{
+        font-size: 22px; 
+    }
+
+    ul{
+
+        list-style-type: none;
+        padding: 0; 
+
+        li{
+
+            text-align: left;
+
+            a{
+                color: colors.$steelblue; 
+                font-size: 22px;
+            }
+        }
+    }
+}

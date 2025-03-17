@@ -1,53 +1,25 @@
-import Layout from "./Layout"
+import { useEffect } from "react";
+import { resources } from "../ressurser-javascript/ressurser"
+import NavItem from "./NavItem"
+import { useParams } from "react-router-dom";
+import "../styles/Nav.scss"
 
-export default function Nav() {
-    const {category} = useParams(); 
-    console.log(category)
+export default function Nav({presentCategory}) {
+    const categories = resources.map(resource => resource.category).filter((value, index, self) => self.indexOf(value) === index)
    
     return (
         <>
         <header>
             <nav>
-                <Layout/>
-                <button>
-                    {category}
-                </button>
+                <ul>
+                    {categories.map((category, index) => 
+                        <li className={category === presentCategory ? "currentNav": ""} key={index}>
+                            <NavItem category={category}/>
+                        </li>
+                    )}
+                </ul>
             </nav>
         </header>
-
-        <Link to="/">Hjem</Link>
-          <Link to="bosses">Bosses</Link>
-          <Link to="characters">Characters</Link>
-          <Link to="items">Items</Link>
-          <Link to="places">Places</Link>
-           
-           <ul>
-                <li>
-                    <button onclick = "articleCardChange('HTML')">
-                        HTML
-                    </button>
-                </li>
-                <li>
-                    <button onclick = "articleCardChange('CSS')">
-                        CSS
-                    </button>
-                </li>
-                <li>
-                    <button onclick = "articleCardChange('JavaScript')">
-                        JavaScript
-                    </button>
-                </li>
-                <li>
-                    <button onclick = "articleCardChange('React')">
-                        React
-                    </button>
-                </li>
-                <li>
-                    <button onclick = "articleCardChange('Sanity and headless CMS')">
-                        Sanity and headless CMS 
-                    </button>
-                </li>
-            </ul>
     </>
     )
 }
