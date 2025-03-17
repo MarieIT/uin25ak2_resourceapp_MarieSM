@@ -1,10 +1,7 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react'
 import './App.css'
-import {Routes, Route, useParams} from "react-router-dom"; 
+import { Routes, Route } from "react-router-dom"; 
 import Resources from "./components/Resources"; 
-import Nav from "./components/Nav"; 
 import Layout from './components/Layout';
 
 function App() {
